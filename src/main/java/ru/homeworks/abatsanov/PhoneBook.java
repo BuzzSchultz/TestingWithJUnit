@@ -65,8 +65,15 @@ public class PhoneBook {
             System.out.println("-----------------");
         }
     }
-    @Override
-    public String toString () {
-        return String.valueOf(phoneBook);
+
+    public int size() {
+        return phoneBook.size();
+    }
+
+    public List<Contact> get(String key) {
+        List<Contact> list = phoneBook.get(key);
+        list.sort(Comparator.comparing(Contact::toString));
+        return list;
     }
 }
+

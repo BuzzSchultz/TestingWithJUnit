@@ -50,6 +50,7 @@ public class Main {
         MissedCalls missedCallsList = new MissedCalls();
         myPhoneBook.addGroups(groupNames);
         fillMyPhoneBook(myPhoneBook);
+
         while (true) {
             System.out.println("Выберите действие:");
             for (String action : actionsList) {

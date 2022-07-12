@@ -21,6 +21,8 @@ public class Contact {
 
     @Override
     public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || !obj.getClass().equals(Contact.class)) return false;
         Contact o = (Contact) obj;
         return name.equals(o.name) && phoneNumber.equals(o.phoneNumber);
     }
